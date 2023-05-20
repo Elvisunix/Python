@@ -31,3 +31,6 @@ print ("hola" >= "zola")
 
 #Comparar por cantidad de caracteres
 print (len("holaa") >= len("zdios"))
+
+print (3 > 4 and "Hola" < "Python")
+print (3 > 4 or  "Hola" < "Python")
