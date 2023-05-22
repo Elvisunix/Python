@@ -49,6 +49,7 @@ print (language.count("t"))
 print (language.isnumeric())
 print ("1".isnumeric())
 print (language.upper().isupper())
+print(language.startswith("p"))
 
 
 
