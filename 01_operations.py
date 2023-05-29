@@ -36,3 +36,14 @@ print (3 > 4 and "Hola" < "Python")
 print (3 > 4 or  "Hola" < "Python")
 print (3 > 4 or  "Hola" > "Python" and 4==4)
 print (not(3 > 4))
+
+print (3 + 2 * 2)
+
+name = 'Lizz'
+print (name[0:2])
+
+
+var = '01234567'
+print(var[::2])
+
+print ('1'+'2')

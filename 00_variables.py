@@ -23,3 +23,5 @@ print("Me llamo:", name , "Mi apodo es:" ,alias, "Mi edad es:", 35 )
 #Variables solicitadas desde terminal
 direccion = input('¿Que dirección quieres buscar?')
 print (direccion)
+
+
