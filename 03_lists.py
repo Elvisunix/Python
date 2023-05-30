@@ -67,6 +67,4 @@ print (my_new_list)
 my_other_list.reverse()
 print(my_other_list)
 
-#Ordenar una lista
-my_other_list.sort()
-print(my_other_list)
+print(my_other_list[1:3])
