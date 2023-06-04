@@ -26,7 +26,16 @@ print ("Maria" in my_other_set)
 my_other_set.remove("Paco")
 print(my_other_set)
 
+#vaciar el set
 my_other_set.clear()
 print(len(my_other_set))
 
+#Eliminar el set
 del my_other_set
+
+my_set = {"Juanjo", "Jumilla", 35, "Python"}
+my_list = list(my_set)
+
+print (type(my_list))
+print (my_list)
+print (my_list[2])
