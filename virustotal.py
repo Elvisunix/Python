@@ -1,5 +1,6 @@
 from virus_total_apis import PublicApi
 import  requests
+import json
 
 API_KEY = "21843cd83304289ab21395cb7278608dee9e6d1751c57bfbbf518bc1f0c75326"
 
@@ -15,11 +16,14 @@ headers = {
 }
 
 response = requests.get(url, headers=headers)
-print(response.text)
 
-#Selccionamos el campo que queremos mostrar
-property = response.json()['data']['attributes']['last_analysis_stats']['malicious']
+#mostrar el json completo ordenado
+print(json.dumps(response.json(), indent=4, sort_keys=True))
 
-print(property)
-
-
+if response.status_code == 200:
+    data = response.json()
+    bitdefender_result = data["data"]["attributes"]["categories"]["BitDefender"]
+    malicious_result = data["data"]["attributes"]["last_analysis_stats"]["malicious"]
+    print("Resultado de Bitdefender:", bitdefender_result +  " - " + "Malicious:", malicious_result)
+else:
+    print("Error en la solicitud:", response.status_code)
