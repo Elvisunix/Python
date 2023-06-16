@@ -25,5 +25,8 @@ if response.status_code == 200:
     bitdefender_result = data["data"]["attributes"]["categories"]["BitDefender"]
     malicious_result = data["data"]["attributes"]["last_analysis_stats"]["malicious"]
     print("Resultado de Bitdefender:", bitdefender_result +  " - " + "Malicious:", malicious_result)
+    print("RESULTADOS DE LOS SERVIDORES ESCANEADOS:")
+    for i in data["data"]["attributes"]["last_analysis_results"]:
+        print(i, data["data"]["attributes"]["last_analysis_results"][i]["result"])
 else:
     print("Error en la solicitud:", response.status_code)
